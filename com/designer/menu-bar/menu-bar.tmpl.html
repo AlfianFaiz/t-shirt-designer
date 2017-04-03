@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+    
+<ul class="nav navbar-nav" style="width:100%; " id="menu_container">
+    
+   <li ng-repeat="item in menuList" style="height : 50px;">
+           
+      <div ng-if="item.name != 'Container'" class="draggable ui-draggable ui-draggable-handle">
+          
+            <center>
+          
+             <span class="{{item.icon}} menuIcon" style="top:8px; height:26px;" 
+                   title="{{item.name}}" ></span> <br/>
+            <span style="font-size:12px; color:#000;" >{{item.name}}</span>
+             
+          </center>
+          
+         <div ng-if="item.name == 'Label'" class=" imageClass" datasource = "none" identifier = "{{item.cp_display}}" class="hidethis">
+             
+          <div id = "label_txt" class="imageClass">{{item.text}}</div>
+             
+         </div>
+          
+         <div ng-if="item.name == 'Image'" datasource = "none"  identifier = "{{item.cp_display}}" class="hidethis">
+            <img id="img_mc" class="image2 imageClass" src="{{item.src}}" />
+         </div>
+          
+      </div>
+      
+   </li>
+   <!---
+    <li id="delete_btn" class="pull-right" ng-click="deleteSelectedControl()" ng-disabled="getComponentSelectedStatus()" >
+        
+        <span  class="glyphicon glyphicon-trash menuIcon" 
+              data-toggle="tooltip" data-placement="bottom" title="Delete" aria-hidden="true"></span>
+        
+    </li> -->
+    
+</ul>
+</nav>

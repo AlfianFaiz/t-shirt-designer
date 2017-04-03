@@ -1,0 +1,9 @@
+@font-face {font-family: 'BroshK';
+	font-style: normal;
+	font-weight: normal;
+	src: url(BroshK.woff) format('woff'),
+	url(BroshK.ttf) format('truetype');
+}
+
+
+/*@font-face{font-family:'BroshK'; font-style: normal;  font-weight: 500; src: url('./fonts/BroshK.woff');} */

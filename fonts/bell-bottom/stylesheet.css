@@ -1,0 +1,6 @@
+@font-face {font-family: 'BellBottom';
+	font-style: normal;
+	font-weight: normal;
+	src: url(bellbottom.woff) format('woff'),
+	url(bellbottom.ttf) format('truetype');
+}

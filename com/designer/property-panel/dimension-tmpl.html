@@ -1,0 +1,37 @@
+<div class="form-group form-group-sm">
+<label>POSITION AND SIZE </label>
+<ul class="list-group">
+   <li class="list-group-item">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="input-group input-group-sm">
+               <span class="input-group-addon" id="basic-addon1">X</span>
+               <input class="form-control" type="textinput" ng-blur="updateComponentProperty(componentObj().left, 'left')" ng-model="componentObj().left">
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="input-group input-group-sm">
+               <span class="input-group-addon" id="basic-addon1">Y</span>
+               <input class="form-control" type="textinput" ng-blur="updateComponentProperty(componentObj().top, 'top')" ng-model="componentObj().top">
+            </div>
+         </div>
+      </div>
+   </li>
+   <li class="list-group-item">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="input-group input-group-sm">
+               <span class="input-group-addon" id="basic-addon1">W</span>
+               <input class="form-control" type="textinput" ng-blur="updateComponentProperty(componentObj().width, 'width')" ng-model="componentObj().width">
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="input-group input-group-sm">
+               <span class="input-group-addon" id="basic-addon1">H</span>
+               <input class="form-control" type="textinput" ng-blur="updateComponentProperty(componentObj().height, 'height')" ng-model="componentObj().height">
+            </div>
+         </div>
+      </div>
+   </li>
+</ul>
+</div>

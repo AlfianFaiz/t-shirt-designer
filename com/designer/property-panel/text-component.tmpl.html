@@ -1,0 +1,67 @@
+<div ng-show = "isItTextComponent()">
+       
+      <div class="form-group" >
+         <label>Text </label>
+         <textarea class="form-control" rows="4" 
+            ng-model="componentObj().text" auto-focus="" 
+            ng-change="updateComponentProperty(componentObj().text, 'text')"></textarea> 
+      </div>
+       
+      <div >
+         <div class="form-group">
+            <select ng-change="changeFont(selectedFont)" ng-model="selectedFont" class="form-control">
+               <option ng-repeat = "font in getFonts()" value="{{font.name}}">{{font.name}}</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <div class="row" style = "margin : 0px">
+               <div class="col-md-6">
+                  <label>Size </label>
+                  <div class="input-group input-group-sm">
+                     <span class="input-group-btn">
+                     <button type="button" class="btn btn-primary" 
+                        ng-disabled = "componentObj().fontSize < 10"
+                        ng-click = "fontSize('-')" aria-label="-">
+                     <span class="glyphicon glyphicon-minus"></span></button>
+                     </span>
+                     <input type="text" style = "text-align : center"
+                        ng-blur = "updateComponentProperty(componentObj().fontSize, 'font-size')" 
+                        ng-model = "componentObj().fontSize" class="form-control" >
+                     <span class="input-group-btn">
+                     <button type="button" class="btn btn-primary" ng-disabled = "componentObj().fontSize >= 100" 
+                        ng-click = "fontSize('+')" aria-label="+">
+                     <span class="glyphicon glyphicon-plus"></span></button>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <label>Spacing </label>
+                  <div class="input-group input-group-sm">
+                     <span class="input-group-btn">
+                     <button type="button" class="btn btn-primary" 
+                        ng-disabled = "componentObj().letterSpacing < 1"
+                        ng-click = "letterSpacing('-')" aria-label="-">
+                     <span class="glyphicon glyphicon-minus"></span></button>
+                     </span>
+                     <input type="text" style = "text-align : center"
+                        ng-blur = "updateComponentProperty(componentObj().letterSpacing, 'letter-spacing')" 
+                        ng-model = "componentObj().letterSpacing" class="form-control" >
+                     <span class="input-group-btn">
+                     <button type="button" class="btn btn-primary" ng-disabled = "componentObj().letterSpacing >= 30" 
+                        ng-click = "letterSpacing('+')" aria-label="+">
+                     <span class="glyphicon glyphicon-plus"></span></button>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="form-group">
+            <material-picker ng-model="color" format="'hex'" hover-model="hoverColor" size="size"></material-picker>
+             
+         </div>
+          <div class="form-group">
+                <button class="btn btn-primary" ng-click = "updateComponentProperty(color, 'color')" >Select color</button>
+            </div>
+      </div>
+       
+   </div>

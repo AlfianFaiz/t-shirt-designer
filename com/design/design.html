@@ -1,0 +1,242 @@
+<div>
+    
+  
+   
+   <div class="product-section wizard-test">
+       
+      <div class="w-container">
+         <div class="w-row">
+             
+            <div class="product-col w-col w-col-6 w-col-stack" style="transition: opacity 0.5s; opacity: 1;">
+                <div class="wizard-image">                    
+                    <img class="wizard-image" src="{{homeCtrl.getSelectedColorInfo().image}}" alt="t-shirt design to create your own custom tees online">                    
+                </div>
+            </div>
+             
+            <div class="w-clearfix w-col w-col-6 w-col-stack" style="transition: opacity 0.5s; opacity: 1;">
+               <div class="product-cta-div w-clearfix">
+                   
+                   <!--
+                   
+                  <h2 class="product-h1">Pick a T-Shirt Color</h2>
+                  <a class="quote-calculator-link-block w-clearfix w-inline-block wizard-view-more" href="#wizard">
+                     <div class="calculate-text">(<span class="orange-link-text">Change Product</span>)</div>
+                  </a>
+                  <h4 class="in-wizard product-h4">We will match you to the most popular 100% Cotton Shirt</h4>
+                   
+                   -->
+                   
+                  <div class="wizard-button-group">
+                     <div class="wizard-selected-color" 
+                          ng-style = "{ 'background-color' : homeCtrl.getSelectedColorInfo().color }" style="border: 1px solid rgb(0, 0, 0);"></div>
+                      
+                     <div class="w-clearfix wizard-combo-box">
+                        <div class="expended-color-div w-clearfix">
+                           <div class="expanded-select-text">Selected Color:</div>
+                           <div class="expanded-color-text">{{homeCtrl.getSelectedColorInfo().name}}</div>
+                        </div>
+                        <a class="fix main-cta-button product-page-button w-button" ng-click = "homeCtrl.gotoDesign()" >Start Designing&nbsp;</a>
+                     </div>
+                      
+                  </div>
+                   
+                  <div class="colors-div w-clearfix">
+                      
+                     <h3 class="wizard-color-heading" style="display: block;">Color Choices for Any Quantity</h3>
+                      
+                      <div class="color-div" ng-repeat = "color in homeCtrl.getColorList()">
+                        <div class="color" 
+                             ng-class="[{true:'color-border', false:''}[homeCtrl.isWhiteColor(color)], 
+                                       {true:'active-color', false:''}[homeCtrl.checkColorName(color)]]"  
+                             ng-click = 'homeCtrl.setSelectedColorInfo(color)'
+                             ng-style = "homeCtrl.getStyleInfo(color)" >
+                         </div>
+                        
+                     </div>
+                      
+                       <!--ng-mouseover = 'homeCtrl.setSelectedColorInfo(color)'
+                      
+                     <div class="color-div">
+                        <div class="color color-border active-color" style="width: 30px; height: 30px; margin-top: -1px; margin-left: -1px; background-color: rgb(255, 255, 255);"></div>
+                     </div>
+                      
+                     <div class="color-div">
+                        <div class="color" ng-mouseover = '' ng-style = "homeCtrl.homeModel.getStyleInfo()" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(0, 0, 0);"></div>
+                     </div>
+                      
+                     <div class="color-div">
+                        <div class="color" ng-style = "homeCtrl.homeModel.getStyleInfo()" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(4, 115, 174);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(202, 191, 173);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(34, 77, 143);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(204, 9, 9);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(32, 47, 75);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(220, 214, 193);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(94, 99, 63);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(242, 194, 219);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(177, 193, 216);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(0, 116, 67);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(0, 158, 58);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(59, 82, 96);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(208, 196, 197);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(238, 166, 5);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(33, 45, 35);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(45, 28, 8);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(102, 103, 108);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(148, 29, 48);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(32, 43, 51);"></div>
+                     </div>
+                     
+                     
+                      
+                      <h3 class="wizard-color-heading" style="display: block;">More Color Choices for 6+ Shirts</h3>
+                      
+                      
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(217, 119, 169);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(172, 43, 55);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(0, 135, 118);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(244, 209, 161);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(249, 202, 53);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(122, 114, 86);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(178, 158, 105);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(189, 92, 26);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(219, 62, 121);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(189, 158, 212);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(215, 229, 53);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(152, 204, 81);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(122, 143, 159);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(109, 79, 73);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(215, 215, 215);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(20, 44, 71);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(234, 79, 0);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(77, 35, 121);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(91, 43, 66);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(152, 171, 100);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(135, 208, 238);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(44, 47, 47);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(123, 164, 219);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(189, 194, 147);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(57, 117, 183);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(255, 127, 42);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(51, 63, 72);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(91, 103, 112);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(151, 153, 155);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(163, 46, 74);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(2, 164, 105);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(0, 89, 96);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(255, 123, 168);"></div>
+                     </div>
+                     <div class="color-div">
+                        <div class="color" style="width: 27px; height: 27px; margin-top: 0px; margin-left: 0px; background-color: rgb(135, 23, 41);"></div>
+                     </div>
+                      
+                      -->
+                      
+                  </div>
+                   
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

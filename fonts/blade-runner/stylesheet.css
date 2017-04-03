@@ -1,0 +1,6 @@
+@font-face {font-family: 'Blade Runner Movie Font';
+	font-style: normal;
+	font-weight: normal;
+	src: url(blade_runner_movie_font.woff) format('woff'),
+	url(blade_runner_movie_font.ttf) format('truetype');
+}

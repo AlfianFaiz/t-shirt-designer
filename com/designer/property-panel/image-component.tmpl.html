@@ -1,0 +1,53 @@
+<div>
+    <div class="form-group" style = "margin-bottom : 0px;">
+        
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Image source</h3>
+          </div>
+          <div class="panel-body">
+            
+              <div class="input-group input-group-sm" >
+                <input class="form-control" type="textinput" ng-blur="updateComponentProperty(componentObj().src, 'img_mc')" ng-model="componentObj().src">
+                <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" ng-click = "" >
+                <span class="glyphicon glyphicon-search"></span></button>
+                </span>
+             </div>
+              
+          </div>
+        </div>
+     
+    </div>
+    
+    <div class="panel panel-default" style="padding : 0px">
+      
+     <div class="panel-heading">
+        <h3 class="panel-title">Image Filters</h3>
+      </div>
+        <div class="panel-body">
+         
+        <div ng-repeat = "filter in getFilters()">
+                
+            <div class="checkbox">
+                <label style = "width : 130px" 
+                       ng-click = 'applyFilers(filter.name, filter.defaultValue+filter.unit, filter.select)'>
+                    <input ng-model = "filter.select" type="checkbox" > {{filter.name}}</label>
+                <input type="textbox" style="display : inline; width : 60px; height : 28px;" class="form-control" ng-disabled = "!filter.select" ng-model = "filter.defaultValue" size="3" ng-click = "filter.sliderVisible = true">
+                
+                <div style = "left : 130px; position : absolute; right : 40px; width : 110px; z-index : 999" ng-show = "filter.sliderVisible">
+                <div range-slider move-event-handler = 'applyFilers(filter.name, filter.defaultValue+filter.unit, filter.select)' min = "filter.min" max = "filter.max" model-max="filter.defaultValue" on-handle-up = "onSliderHandleUp(filter)" 
+                     pin-handle="min" style = "width : 110px"></div>
+                </div>
+                
+            </div>
+            
+            
+            
+        </div>
+           
+      </div>
+    </div>
+       
+</div>

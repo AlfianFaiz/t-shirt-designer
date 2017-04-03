@@ -1,0 +1,67 @@
+
+<div>
+            
+        <div id="product-canvas" style="border 1px solid" draggable="false">
+        
+        <svg viewBox="0 0 1200 1130" preserveAspectRatio="none" id="product-canvas-mask" ng-style = "getCSSStyle()" pointer-events="none" draggable="false" style="position : absolute; width: 1061.22px; height: 999.316px; top: -310.862px; left: 151.39px;" class="__web-inspector-hide-shortcut__">
+
+                <defs>
+
+                    <mask id="mask">
+
+                        <rect x="0" y="0" width="1200" height="1130" fill="#fff"></rect>
+
+                        <image x="0" y="0" width="1200" height="1130" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="//s3.amazonaws.com/eztees-catalog/productmask/3600_b_mask.png" ng-href="{{designModel.getMaskSource()}}"></image>
+                    </mask>
+
+                </defs>
+
+                <rect x="0" y="0" width="1200" height="1130" mask="url(#mask)" 
+                      ng-attr-fill="{{getColorHex(selectedColor.color)}}" fill="#B50011"></rect>
+        </svg>
+        
+          <svg viewBox="0 0 1200 1130" preserveAspectRatio="none" id="product-canvas-texture" ng-style = "getCSSStyle()" pointer-events="none" draggable="false" style=" position : absolute; overflow: hidden; width: 1061.22px; height: 999.316px; top: -310.862px; left: 151.39px;"><image x="0" y="0" width="1200" height="1130" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="//s3.amazonaws.com/eztees-catalog/productmask/3600_b_texture.png" ng-href="{{designModel.getTextureSource()}}"></image></svg>
+            
+        <div class="print-area" ng-style="getWorkAreaCSSStyle()" style="position : absolute;">
+
+           <!--     <div class="print-area-warning light" style=" border : solid 1px; ">Objects outside of the blue box will not be printed and should be adjusted</div>
+
+            <div class="print-area-guide" ng-repeat="guide in guides track by guide.id" guide="guide" scale="workspace.scale" show-label="guides.length > 1" light-label="isOnLightGarment();" ng-class="{active: displayBorder}" style="top: 0px; left: 15.9674px; width: 265.305px; height: 337.773px;">
+
+            <div class="print-area-guide-center"></div><div class="print-area-guide-label ng-binding ng-hide light" ng-show="showLabel" ng-class="{light: lightLabel}" style="">Adult</div><div class="print-area-guide-center-label light" ng-class="{light: lightLabel}" style="">Centered</div></div> -->
+
+        <stage></stage>        
+
+        </div>    
+            
+        <div class="workspace-rotate" ng-click="togglePrintArea()" ng-class = "{'active-printarea': rotateIsActive()}" >
+           <div>
+               <img id="rotate" src="assets/icons/rotate-icons.svg" alt="rotate" width="56"> 
+            </div>
+        </div>
+           
+        
+    </div>
+            
+</div>
+
+ 
+
+<div style="left: 10px; top:10px; width : 80px; height:30%; position : absolute;" >
+                
+    <menu-bar menu-list = "menuDataCollection"></menu-bar>
+                
+</div>
+
+
+<div style="width : 300px; height:85%; position : absolute; border : solid 1px; padding : 15px; right:10px; top:10px; border-radius : 4px; padding : 5px;" >
+  <div property-panel property-list = "menuDataCollection" tabindex="-1"></div>
+</div>
+
+
+<div style="width : 300px; height:10%; position : absolute; border : solid 1px; padding : 15px; right:10px; bottom:10px; border-radius : 4px; " >
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click = "openUserRergistorPopup()" >Save My Design</button>
+        </div>
+</div>
+

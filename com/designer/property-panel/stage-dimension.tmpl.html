@@ -1,0 +1,35 @@
+<div ng-show = "checkStageClicked()" >
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Stage size</h3>
+      </div>
+      <div class="panel-body">
+        
+          <div class="form-group form-group-sm">
+         
+         <ul class="list-group">
+            <li class="list-group-item">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="basic-addon1">W</span>
+                        <input class="form-control" type="textinput" ng-blur="updateStageProperty(getStageWindowObject().width, 'width')" ng-model="getStageWindowObject().width">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="basic-addon1">H</span>
+                        <input class="form-control" type="textinput" ng-blur="updateStageProperty(getStageWindowObject().height, 'height')" ng-model="getStageWindowObject().height">
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+          
+      </div>
+    </div>
+    
+   </div>

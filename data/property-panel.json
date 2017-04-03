@@ -1,0 +1,62 @@
+{
+   "fonts":[  
+      {  
+         "id":1,
+         "name":"Arial",
+         "css_path":"-1"
+      },
+      {  
+         "id":2,
+         "name":"Verdana",
+         "css_path":"-1"
+      },
+      {  
+         "id":3,
+         "name":"Impact",
+         "css_path":"-1"
+      },
+      {  
+         "id":3,
+         "name":"Comic Sans MS",
+         "css_path":"-1"
+      },
+      {  
+         "id":4,
+         "name":"Action Jackson",
+         "css_path":"fonts/action-jackson/stylesheet.css"
+      },
+      {  
+         "id":5,
+         "name":"Aladdin Regular",
+         "css_path":"fonts/aladdin/stylesheet.css"
+      },
+      {
+         "id":6,
+         "name":"Blade Runner Movie Font",
+         "css_path":"fonts/blade-runner/stylesheet.css"
+      },
+      {  
+         "id":7,
+         "name":"BellBottom",
+         "css_path":"fonts/bell-bottom/stylesheet.css"
+      },
+      {  
+         "id":6,
+         "name":"BroshK",
+         "css_path":"fonts/brosh-k/stylesheet.css"
+      }
+   ],
+    
+"filters":
+    [
+       {"name" : "grayscale", "select" : false, "sliderVisible" : false, "defaultValue" : 50, "min" : 0, "max" : 100, "unit" : "%", "divide" : 1},
+       {"name" : "blur", "select" : false, "sliderVisible" : false, "defaultValue" : 5, "min" : 0, "max" : 30, "unit" : "px", "divide" : 1},
+       {"name" : "sepia", "select" : false, "sliderVisible" : false, "defaultValue" : 100, "min" : 0, "max" : 100, "unit" : "", "divide" : 100},
+       {"name" : "saturate", "select" : false, "sliderVisible" : false, "defaultValue" : 25, "min" : 0, "max" : 100, "unit" : "", "divide" : 100},
+       {"name" : "opacity", "select" : false, "sliderVisible" : false, "defaultValue" : 100, "min" : 0, "max" : 100, "unit" : "", "divide" : 100},
+       {"name" : "brightness", "select" : false, "sliderVisible" : false, "defaultValue" : 100, "min" : 0, "max" : 200, "unit" : "%", "divide" : 1},
+       {"name" : "contrast", "select" : false, "sliderVisible" : false, "defaultValue" : 100, "min" : 0, "max" : 200, "unit" : "%", "divide" : 1},
+       {"name" : "hue-rotate", "select" : false, "sliderVisible" : false, "defaultValue" : 320, "min" : 0, "max" : 360, "unit" : "deg", "divide" : 1},
+       {"name" : "invert", "select" : false, "sliderVisible" : false, "defaultValue" : 100, "min" : 0, "max" : 100, "unit" : "%", "divide" : 1}
+   ]
+}
