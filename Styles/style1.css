@@ -1,0 +1,56 @@
+body {
+  background-color: #f7f7f7;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+
+/*style="top: 0px; left: 17.3696px; width: 288.603px; height: 367.434px;" */
+
+#container {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #2856B6;     
+}
+
+#navMenu {
+    background: #5f5f5f;
+    max-height: 50px;
+    overflow: hidden;
+}
+#navMenu ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#menu_container li {
+    display: inline;
+    float: left;
+    margin: 10px;
+    margin-left: 2em;
+}
+
+.hidethis{
+  display:  none;
+}
+
+.inputClass {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.target{
+  float:left;
+  content: " ";
+  height: 40px;
+  margin-top: 3px;
+  background: #f0f0f0;
+  width: 160px;
+  border: 1px dashed #ccc;
+}
+
+.selectedComponent {
+    border: 1px;
+    border-color: black;
+}

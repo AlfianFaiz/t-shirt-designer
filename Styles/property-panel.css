@@ -1,0 +1,76 @@
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+*:active {
+outline: none;
+border: none;
+}
+
+*:focus {outline:0;}
+
+.ui-resizable-handle {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+
+
+}
+.ui-resizable-n{
+     top: -10px;
+    left:50%;
+
+}
+.ui-resizable-e
+{
+   right:-10px;
+     top:50%;    
+}
+.ui-resizable-s
+{
+     bottom: -10px;
+    left: 50%;
+}
+
+.ui-resizable-w
+{
+     left:-10px;
+     top:50%;
+}
+
+.ui-resizable-nw
+{
+     left: -10px;
+    top: -10px;    
+}
+.ui-resizable-ne
+{
+     top: -10px;
+     right: -10px; 
+}
+.ui-resizable-sw
+{
+    bottom: -10px;
+    left: -10px;
+}
+.ui-resizable-se
+{
+    bottom: -10px;
+    right: -10px;
+}
