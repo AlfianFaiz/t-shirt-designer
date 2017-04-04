@@ -11,7 +11,7 @@
          "fontSize":20,
          "letterSpacing":2,
          "W" : 150,
-         "H":80
+         "H":35
       },
       {
          "src":"https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/car.svg",
@@ -22,8 +22,8 @@
          "parentId":-1,
          "name_for_server":"image",
          "type":"image",
-         "W" : 200,
-         "H":200 
+         "W" : 150,
+         "H":100 
       }
    ]
 }
