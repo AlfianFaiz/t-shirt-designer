@@ -2,7 +2,9 @@
     
     var module = angular.module('com.t-designer.home', []);  
     
-    module.controller('HomeCtrl', function HomeCtrl($scope, $state, DesignSeletionModel) {
+    module.controller('HomeCtrl', function HomeCtrl($scope, $state, DesignSeletionModel, AppModel) {
+        
+            AppModel.isDesignerSection = false;
         
         var homeCtrl = this;
             homeCtrl.getColorList = DesignSeletionModel.getColorList;

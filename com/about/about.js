@@ -5,10 +5,10 @@
         'com.t-designer.grid-area',
         'com.t-designer.property-panel']);  
     
-    module.controller('AboutCtrl', function HomeCtrl($scope, $stateParams, $modal, StageModel, MenuBarModal, PropertyModel, ComponentDataModel, ComponentManagerModel, DesignSeletionModel, DesignModel) {
+    module.controller('AboutCtrl', function HomeCtrl($scope, $stateParams, $modal, StageModel, MenuBarModal, PropertyModel, ComponentDataModel, ComponentManagerModel, DesignSeletionModel, DesignModel, AppModel) {
         
         var isRotateActive = false;
-        
+        AppModel.isDesignerSection = true;
         $scope.designModel = DesignModel;
         $scope.selectedColor = DesignSeletionModel.getSelectedColorInfoById($stateParams['productId']);
         

@@ -1,6 +1,6 @@
 (function() {
     
-    var app = angular.module('powerScreenApp', [
+    var app = angular.module('T_Shirt_Designer_App', [
         'ui.bootstrap', 
         'ui.router',
         'ui.bootstrap.materialPicker',
@@ -32,6 +32,17 @@
                 controller: 'AboutCtrl as aboutCtrl'
             });
 
-    })
+    });
+
+    app.controller("AppController", function($scope, AppModel){
+        $scope.appModel = AppModel;
+        
+    });
+    
+    app.service("AppModel", function(){
+        var self = this;
+            
+            self.isDesignerSection = false;
+    });
     
 }());

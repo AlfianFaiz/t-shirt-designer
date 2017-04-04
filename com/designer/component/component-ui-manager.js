@@ -56,7 +56,11 @@
             var id = (component.attr('id') || 'id') + getUniqueId();
             component.attr('id', id);
             
-           component.removeClass("draggable div ui-draggable ui-draggable-handle ui-draggable-dragging ui-resizable").addClass("ui-wrapper ui-draggable ui-draggable-handle");
+            component.removeClass("draggable div ui-draggable ui-draggable-handle ui-draggable-dragging ui-resizable");
+               
+               //.addClass("ui-wrapper ui-draggable ui-draggable-handle");
+            
+            $(component).find(".ui-resizable-handle").hide();
             
             $(component).removeAttr("ng-if");
             
@@ -100,7 +104,7 @@
                             component.css('top').replace('px', ''),
                             component.css('left').replace('px', ''));
                 
-            }, 500);
+            }, 100);
             
         };
         
@@ -122,7 +126,7 @@
         function setResizeEvent(component) {
             var timeoutId = 0;
             
-            component.resizable({ containment: "#container", handles: "n, e, s, w, nw, ne, sw, se",  autoHide: true}).bind({
+            component.resizable({ containment: "#container", handles: "n, e, s, w, nw, ne, sw, se"}).bind({
                 resize: function(event, ui) {
                     
                     var resizedWidth = ui.size.width;
@@ -157,7 +161,10 @@
 
         function setDragEvent(component) {
             var timeoutId = 0;
-            var myLseft = 0;
+            
+            component.bind( "mousedown", function( event ) {
+                componentClickHandler(event);
+            });
             
             component.draggable({
                 containment: "#container",
@@ -203,12 +210,15 @@
             
             event.stopPropagation();
             
-            if ((this.id === "") || (typeof this.id === "undefined") || (this.id.search('id') == -1)) {
+            if ((event.currentTarget.id === "")
+                || (typeof event.currentTarget.id === "undefined") 
+                || (event.currentTarget.id.search('id') == -1)) {
                 return;
             }
             
             StageModel.isStageSelected = false;
-            var comId = this.id;
+            
+            var comId = event.currentTarget.id;
             
             stageScope.$apply(function() {
                 
@@ -219,26 +229,26 @@
                 self.setSelectedComponent(event.currentTarget, 4);
                 setSelectedComponentType(comId);
                 $rootScope.$broadcast(self.COMPONENT_SELECTION_CHANGED);
+                
                                
             });
             
-            //console.log("componentClickHandler  componentType      "+componentType);
-            
             setComponentSelectedStage();
+            
         };
         
         function setComponentSelectedStage(){
-                
             if(previousSelectedComponent){
                 previousSelectedComponent.css({border: '1px solid #dddddd'});
+                $(previousSelectedComponent).find(".ui-resizable-handle").hide();
             }
             $(selectedComponent).css({border: '1px solid #f57c23'});
+            $(selectedComponent).find(".ui-resizable-handle").show();
             previousSelectedComponent = $(selectedComponent);
             PropertyModel.showComponentProperties();
         };
         
         var previousSelectedComponent = null;
-        var previousSelectedCardComponent = null;
         
         self.resetAllSelectedComponents = function () {
             
@@ -246,7 +256,7 @@
                 previousSelectedComponent.css({border: '1px solid #dddddd'});
             }
             
-            
+            $(previousSelectedComponent).find(".ui-resizable-handle").hide();
             previousSelectedComponent = null;
         };
         

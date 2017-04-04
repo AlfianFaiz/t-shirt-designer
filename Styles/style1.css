@@ -54,3 +54,19 @@ STRUCTURE
     border: 1px;
     border-color: black;
 }
+
+
+/*  helpers */
+
+
+.workspace-rotate{z-index:2;position:relative;left:150px;top:10px;margin:auto;vertical-align:middle;width:45px;height:64px}
+.workspace-rotate.active{color:#1b7c9f}
+.workspace-rotate.active svg path{fill:#1b7c9f}
+.workspace-rotate:hover #rotate{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+.workspace-rotate:active #rotate{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+.workspace-rotate svg{position:relative;top:3px}
+.workspace-rotate #rotate{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .25s linear;transition:-ms-transform .25s linear;transition:transform .25s linear}
+.workspace-rotate.active-printarea #rotate{-webkit-transform:scale(-1,1);-ms-transform:scale(-1,1);transform:scale(-1,1)}
+.workspace-rotate.active-printarea:hover #rotate{-webkit-transform:scale(-1.1,1.1);-ms-transform:scale(-1.1,1.1);transform:scale(-1.1,1.1)}
+.workspace-rotate.active-printarea:active #rotate{-webkit-transform:scale(-1.1,1.1);-ms-transform:scale(-1.1,1.1);transform:scale(-1.1,1.1)}
+.workspace-rotate #move{position:relative;top:-5px}
